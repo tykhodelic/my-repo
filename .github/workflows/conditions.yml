@@ -1,0 +1,10 @@
+name: Conditions
+on: push
+jobs:
+  skip-or-run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello"
+        if: ${{ env.SECOND > 30 }} # ワークフロー実行IDで分岐
+        env:
+          SECOND: $(date +'%S')
