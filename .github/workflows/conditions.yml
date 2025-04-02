@@ -4,7 +4,7 @@ jobs:
   skip-or-run:
     runs-on: ubuntu-latest
     steps:
-      - id timestamp
-        run: echo "second=$(date +'%S')" >> ${GITHUB_OUTPUT}
+      - run: echo "SECOND=$(date +'%S')" >> $GITHUB_ENV
       - run: echo "Hello"
-        if: ${{ steps.timestamp.outputs.second > 30 }} # ワークフロー実行IDで分岐
+        if: ${{ SECOND > 30 }} # ワークフロー実行IDで分岐
+
