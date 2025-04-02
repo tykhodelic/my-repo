@@ -6,5 +6,4 @@ jobs:
     steps:
       - run: echo "SECOND=$(date +'%S')" >> $GITHUB_ENV
       - run: echo "Hello"
-        if: ${{ SECOND > 30 }} # ワークフロー実行IDで分岐
-
+        if: ${{ env.SECOND > 30 }} # ワークフロー実行IDで分岐
