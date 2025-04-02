@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id timestamp
-        run: echo "second=$(date +'%S')" >> $GITHUB_OUTPUT
+        run: echo "second=$(date +'%S')" >> ${GITHUB_OUTPUT}
       - run: echo "Hello"
         if: ${{ steps.timestamp.outputs.second > 30 }} # ワークフロー実行IDで分岐
