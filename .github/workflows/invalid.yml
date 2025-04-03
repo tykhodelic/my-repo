@@ -1,2 +1,4 @@
 name: Invalid
 on: push
+jobs:
+  check:
