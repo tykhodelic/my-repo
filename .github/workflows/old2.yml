@@ -1,4 +1,4 @@
-name: Old
+name: Old2
 on: workflow_dispatch
 jobs:
   test:
